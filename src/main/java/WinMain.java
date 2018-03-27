@@ -1,16 +1,16 @@
 public class WinMain
 {	
-	Service m_service;
+	Service service;
 	
 	
 	public WinMain()
 	{
-		m_service = new Service();
+		this.service = new Service();
 	}
 	
 	
 	public static void main(String[] args)
 	{
-		WinMain winmain = new WinMain();
+		WinMain winMain = new WinMain();
 	}
 }
