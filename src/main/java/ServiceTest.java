@@ -2,12 +2,16 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+
 public class ServiceTest
 {
 	@Test
-	public void test()
+	public void test() throws JsonProcessingException
 	{
 		Service service = new Service();
+		String jsonmap;
+		String jsonoutput = "{\"0\":{\"accountNumber\":0,\"firstName\":\"Matt\",\"lastName\":\"Moore\"},\"1\":{\"accountNumber\":1,\"firstName\":\"Nick\",\"lastName\":\"Watton\"},\"2\":{\"accountNumber\":2,\"firstName\":\"Anirban\",\"lastName\":\"Biswas\"},\"3\":{\"accountNumber\":3,\"firstName\":\"Andrew\",\"lastName\":\"McGill\"}}";
 		
 		service.addAccount("Matt", "Moore", 0);
 		assertTrue(service.retrieveAccount(0).getAccountNumber() == 0);
@@ -17,6 +21,9 @@ public class ServiceTest
 		assertTrue(service.retrieveAccount(2).getAccountNumber() == 2);
 		service.addAccount("Andrew", "McGill", 3);
 		assertTrue(service.retrieveAccount(3).getAccountNumber() == 3);
+		
+		jsonmap = service.translateAccountMap();
+		assertEquals(jsonmap, jsonoutput);
 		
 		service.removeAccount(3);
 		service.removeAccount(2);
