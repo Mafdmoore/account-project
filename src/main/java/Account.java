@@ -1,14 +1,10 @@
 public class Account
 {
-	//ATTRIBUTES
 	private String m_firstname;
 	private String m_lastname;
 	private int m_accountnumber;
 	
 	
-	//METHODS
-	
-	//Constructor
 	public Account(String firstname, String lastname, int accountnumber)
 	{
 		m_firstname = firstname;
@@ -17,7 +13,6 @@ public class Account
 	}
 	
 	
-	//Get methods
 	public String getFirstName()
 	{
 		return m_firstname;
