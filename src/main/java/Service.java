@@ -1,5 +1,8 @@
 import java.util.HashMap;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 public class Service
 {
 	//ATTRIBUTES
@@ -33,5 +36,16 @@ public class Service
 	public Account retrieveAccount(int key)
 	{
 		return m_accountMap.get(key);
+	}
+
+	//Translate hashmap to JSON
+	public String translateAccountMap() throws JsonProcessingException
+	{
+		ObjectMapper mapper = new ObjectMapper();
+		String jsonmap = mapper.writeValueAsString(m_accountMap);
+		System.out.println(jsonmap);
+		
+		
+		return jsonmap;
 	}
 }
