@@ -1,30 +1,30 @@
 public class Account
 {
-	private String m_firstname;
-	private String m_lastname;
-	private int m_accountnumber;
+	private String firstName;
+	private String lastName;
+	private int accountNumber;
 	
 	
-	public Account(String firstname, String lastname, int accountnumber)
+	public Account(String firstName, String lastName, int accountNumber)
 	{
-		m_firstname = firstname;
-		m_lastname = lastname;
-		m_accountnumber = accountnumber;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.accountNumber = accountNumber;
 	}
 	
 	
 	public String getFirstName()
 	{
-		return m_firstname;
+		return firstName;
 	}
 	
 	public String getLastName()
 	{
-		return m_lastname;
+		return lastName;
 	}
 	
 	public int getAccountNumber()
 	{
-		return m_accountnumber;
+		return accountNumber;
 	}
 }
