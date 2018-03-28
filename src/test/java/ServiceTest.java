@@ -16,7 +16,7 @@ public class ServiceTest
 	public void setUp()
 	{
 		service = new Service();
-		jsonOutput = "{\"0\":{\"accountNumber\":0,\"firstName\":\"Matt\",\"lastName\":\"Moore\"},\"1\":{\"accountNumber\":1,\"firstName\":\"Nick\",\"lastName\":\"Watton\"},\"2\":{\"accountNumber\":2,\"firstName\":\"Anirban\",\"lastName\":\"Biswas\"},\"3\":{\"accountNumber\":3,\"firstName\":\"Andrew\",\"lastName\":\"McGill\"}}";
+		jsonOutput = "{\"0\":{\"firstName\":\"Matt\",\"lastName\":\"Moore\",\"accountNumber\":0},\"1\":{\"firstName\":\"Nick\",\"lastName\":\"Watton\",\"accountNumber\":1},\"2\":{\"firstName\":\"Anirban\",\"lastName\":\"Biswas\",\"accountNumber\":2},\"3\":{\"firstName\":\"Andrew\",\"lastName\":\"McGill\",\"accountNumber\":3},\"4\":{\"firstName\":\"Andrew\",\"lastName\":\"Prideaux\",\"accountNumber\":4}}";
 		accountCount = 0;
 		
 		service.addAccount("Matt", "Moore", 0);
