@@ -49,13 +49,13 @@ public class ServiceTest
 	public void translateAccountMap() throws JsonProcessingException
 	{
 		jsonMap = service.translateAccountMap();
-		assertEquals(jsonMap, jsonOutput);
+		assertEquals(jsonOutput, jsonMap);
 	}
 	
 	@Test
 	public void countAccountsTest()
 	{
 		accountCount = service.countAccounts("Andrew");
-		assertEquals(accountCount, 2);
+		assertEquals(2, accountCount);
 	}
 }
