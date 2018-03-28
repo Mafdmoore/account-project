@@ -40,4 +40,19 @@ public class Service
 		
 		return jsonMap;
 	}
+
+	public int countAccounts(String firstName)
+	{
+		Account tempAccountObject;
+		int numberOfAccounts = 0;
+		
+		for(int i = 0; i < accountMap.size(); i++)
+		{
+			tempAccountObject = accountMap.get(i);
+			if(tempAccountObject.getFirstName() == firstName) numberOfAccounts++;
+		}
+		
+		
+		return numberOfAccounts;
+	}
 }
