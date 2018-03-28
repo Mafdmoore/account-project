@@ -43,16 +43,6 @@ public class Service
 
 	public int countAccounts(String firstName)
 	{
-		Account tempAccountObject;
-		int numberOfAccounts = 0;
-		
-		for(int i = 0; i < accountMap.size(); i++)
-		{
-			tempAccountObject = accountMap.get(i);
-			if(tempAccountObject.getFirstName() == firstName) numberOfAccounts++;
-		}
-		
-		
-		return numberOfAccounts;
+		return (int)accountMap.values().stream().filter(eachAccount -> eachAccount.getFirstName().equals(firstName)).count();
 	}
 }
